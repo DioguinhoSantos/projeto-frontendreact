@@ -1,20 +1,22 @@
-import './App.css';
+import Filters from './Components/Filters/Filters';
+import { Home } from './Components/ProductList/Home/Home';
+import { Container } from './styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Funcionando!!!!!
-        </p>
-      </header>
-    </div>
+    <Container>
+      <Filters />
+      <Home/>
+        <header className="App-header">
+          <p>
+            Funcionando!!!!!!!!!!!!
+          </p>
+        </header>
+    </Container>
   );
 }
 
 export default App;
-
-
 
 //como colocar um link bonitinho
 /* <a

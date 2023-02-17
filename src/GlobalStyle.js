@@ -1,25 +1,33 @@
 import {createGlobalStyle} from 'styled-components'
-
+import styled from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     * {
-
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 `
 
-export const Body = styled.div`
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+export const Container = styled.div`
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 `
 
-export const Code = styled.div`
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace; 
-`
+// export const Body = styled.div`
+//     margin: 0;
+//     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//       sans-serif;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// `
+
+// export const Code = styled.div`
+//     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//       monospace; 
+// `
 
 //app.css
 // .App {
