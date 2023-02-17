@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Funcionando!!
+          Funcionando!!!!!
         </p>
       </header>
     </div>
@@ -17,11 +17,11 @@ export default App;
 
 
 //como colocar um link bonitinho
-{/* <a
+/* <a
   className="App-link"
   href="https://reactjs.org"
   target="_blank"
   rel="noopener noreferrer"
 >
   Learn React
-</a> */}
+</a> */
