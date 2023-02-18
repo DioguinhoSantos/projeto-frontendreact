@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const CartContainer = styled.div`
+export const ProductCardContainer = styled.p`
     text-align: center;
 `
