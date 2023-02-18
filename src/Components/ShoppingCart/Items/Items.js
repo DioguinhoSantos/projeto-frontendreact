@@ -1,4 +1,4 @@
-import { ItemsContainer } from "./ItemsStyle";
+import { ItemsContainer } from "./itemsStyle";
 
 export const Items = () => {
     return (

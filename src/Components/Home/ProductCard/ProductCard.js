@@ -1,4 +1,4 @@
-import { ProductCardContainer } from "./ProductCardStyle";
+import { ProductCardContainer } from "./productCardStyle";
 
 export const ProductCard = () => {
     return (

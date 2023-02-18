@@ -1,5 +1,5 @@
 import  ProductCard from "./ProductCard/ProductCard";
-import { HomeContainer } from "./HomeStyle";
+import { HomeContainer } from "./homeStyle";
 
 export const Home = () => {
     return (

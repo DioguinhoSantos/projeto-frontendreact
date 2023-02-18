@@ -1,5 +1,5 @@
 import Items from "../Items/Items";
-import { CartContainer } from "./CartStyle";
+import { CartContainer } from "./cartStyle";
 
 export const Cart = () => {
     return (
