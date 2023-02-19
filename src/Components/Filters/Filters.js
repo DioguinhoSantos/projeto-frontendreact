@@ -1,6 +1,6 @@
 
 
-export const Filters = ({}) => {
+export const Filters = () => {
     return (
         <p>Filters</p>
     );

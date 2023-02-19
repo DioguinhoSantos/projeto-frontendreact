@@ -1,5 +1,6 @@
 import Filters from './Components/Filters/Filters';
-import { Home } from './Components/ProductList/Home/Home';
+import { Home } from './Components/Home/Home';
+import { Cart } from './Components/ShoppingCart/Cart/Cart';
 import { Container } from './styles';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             Funcionando!!!!!!!!!!!!
           </p>
         </header>
+        <Cart />
     </Container>
   );
 }
