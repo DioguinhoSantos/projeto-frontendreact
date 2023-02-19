@@ -1,10 +1,6 @@
-import { ProductCardContainer } from "./productCardStyle";
-
 export const ProductCard = () => {
     return (
-        <ProductCardContainer>
-        ProductCart
-        </ProductCardContainer>
+        <p>ProductCard</p>
     );
 }
 

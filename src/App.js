@@ -1,19 +1,22 @@
 import Filters from './Components/Filters/Filters';
 import { Home } from './Components/Home/Home';
-import { Cart } from './Components/ShoppingCart/Cart/Cart';
 import { Container } from './styles';
+import { Cart } from './Components/ShoppingCart/Cart/Cart'
+import Items from './Components/ShoppingCart/Items/Items';
+
 
 function App() {
   return (
     <Container>
       <Filters />
       <Home/>
-        <header className="App-header">
+        {/* <header className="App-header">
           <p>
             Funcionando!!!!!!!!!!!!
           </p>
-        </header>
-        <Cart />
+        </header> */}
+      <Cart/>
+      <Items/>
     </Container>
   );
 }
