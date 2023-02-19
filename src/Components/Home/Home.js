@@ -5,7 +5,7 @@ export const Home = () => {
     return (
         <HomeContainer>
             <p>Home</p>
-            <ProductCard />
+            <ProductCard/>
         </HomeContainer>
     );
 }

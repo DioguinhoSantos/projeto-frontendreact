@@ -1,7 +1,11 @@
+import { ItemsContainer } from "./itemsStyle";
+
 export const Items = () => {
     return (
-        <p>items  funcionando tb</p>
+        <ItemsContainer>
+        Items funcionando
+        </ItemsContainer>
     );
 }
 
-export default Items;
+export default Items
