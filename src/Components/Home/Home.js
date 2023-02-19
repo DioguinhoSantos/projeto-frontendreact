@@ -1,11 +1,11 @@
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "./ProductCard/ProductCard";
 import { HomeContainer } from "./HomeStyle";
 
-export const Home = ({}) => {
+export const Home = () => {
     return (
         <HomeContainer>
             <p>Home</p>
-            <p>{ProductCard}</p>
+            <ProductCard />
         </HomeContainer>
     );
 }

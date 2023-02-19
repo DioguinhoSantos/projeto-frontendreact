@@ -1,4 +1,4 @@
-export const ProductCard = ({}) => {
+export const ProductCard = () => {
     return (
         <p>ProductCard</p>
     );
