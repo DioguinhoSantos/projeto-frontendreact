@@ -4,8 +4,8 @@ import { HomeContainer } from "./HomeStyle";
 export const Home = () => {
     return (
         <HomeContainer>
-            <p>Home</p>
-            <ProductCard/>
+            <h1>Home</h1>
+            <ProductCard />
         </HomeContainer>
     );
 }
