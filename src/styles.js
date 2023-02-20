@@ -7,9 +7,10 @@ export const Container = styled.div`
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    /* align-items: stretch; */
+    align-content: stretch;
+    /* justify-content: space-around; */
     font-size: calc(10px + 2vmin);
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
