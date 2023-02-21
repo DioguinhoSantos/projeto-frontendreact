@@ -1,6 +1,29 @@
+import { CardImg, CardsContainer, ProductCardContainer } from "./ProductCardStyle";
+import img from './github.png'
+
 export const ProductCard = () => {
     return (
-        <p>ProductCard</p>
+        <ProductCardContainer>
+
+            <CardsContainer className='card'>
+                <CardImg src={img} alt='legenda'/>
+                <h4>testinho</h4>
+                <button>Adicionar</button>
+            </CardsContainer>
+
+            <CardsContainer className='card'>
+                <CardImg src={img} alt='legenda'/>
+                <h4>testinho</h4>
+                <button>Adicionar</button>
+            </CardsContainer>
+
+            <CardsContainer className='card'>
+                <CardImg src={img} alt='legenda'/>
+                <h4>testinho</h4>
+                <button>Adicionar</button>
+            </CardsContainer>
+
+        </ProductCardContainer>
     );
 }
 

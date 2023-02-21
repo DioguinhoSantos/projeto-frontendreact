@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const FilterContainer = styled.div`
     display: flex;
-    align-items: flex-start;
-    padding: 1rem;
+    /* align-items: flex-start; */
+    padding: 0.5rem;
+    margin: 0.5rem;
     border: 1px solid;
     box-sizing: border-box;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
 `
 

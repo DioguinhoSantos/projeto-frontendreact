@@ -21,6 +21,14 @@ export const Filters = () => {
                 Busca por nome:
             </label>
                 <input name="nome" id="nome" placeholder="Ex.: Cleiton" />
+            <br />
+
+            <select>
+                <option>Selecione...</option>
+                <option>Crescente</option>
+                <option>Decrescente</option>
+            </select>
+
         </FilterContainer>
     );
 }

@@ -8,9 +8,9 @@ export const Container = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: row;
-    /* align-items: stretch; */
+    align-items: stretch;
     align-content: stretch;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     font-size: calc(10px + 2vmin);
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

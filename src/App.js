@@ -2,6 +2,7 @@ import Filters from './Components/Filters/Filters';
 import { Home } from './Components/Home/Home';
 import { Container } from './styles';
 import { Cart } from './Components/ShoppingCart/Cart/Cart'
+// import { GlobalStyle } from './GlobalStyle';
 
 function App() {
   return (
