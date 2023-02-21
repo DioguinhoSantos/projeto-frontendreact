@@ -1,4 +1,4 @@
-import { FilterContainer } from "./FiltersStyle";
+import { FilterContainer } from "./filtersStyle";
 
 export const Filters = () => {
     return (
@@ -22,12 +22,6 @@ export const Filters = () => {
             </label>
                 <input name="nome" id="nome" placeholder="Ex.: Cleiton" />
             <br />
-
-            <select>
-                <option>Selecione...</option>
-                <option>Crescente</option>
-                <option>Decrescente</option>
-            </select>
 
         </FilterContainer>
     );
