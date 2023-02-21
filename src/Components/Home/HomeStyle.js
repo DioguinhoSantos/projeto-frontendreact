@@ -10,7 +10,19 @@ export const HomeContainer = styled.div`
     border: 1px solid;
     /* align-items: stretch; */
     /* text-align: center; */
-    `
-export const EachCard = styled.div`
+    justify-items: flex-start;
+`
 
+export const NomePagina = styled.p`
+    font-size: 24px;
+`
+
+export const Classificar = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+`
+
+export const Seletor = styled.select`
+    /* flex-direction: flex-start; */
 `
