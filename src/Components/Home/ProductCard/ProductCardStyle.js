@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const ProductCardContainer = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 0.5rem;
     margin: 1rem;
     border: 1px solid;
@@ -17,6 +18,12 @@ export const CardImg = styled.img`
 `
 
 export const CardsContainer = styled.div`
+    max-height: 200px;
     border: 1px solid;
     padding: 0.5rem;
+    margin-bottom: 0.5rem;
+`
+export const Legendas = styled.p`
+    font-size: 14px;
+    padding: 0rem;
 `
