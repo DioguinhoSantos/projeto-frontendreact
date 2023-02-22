@@ -1,4 +1,4 @@
-import { CardImg, CardsContainer, ProductCardContainer, Legendas } from "./ProductCardStyle";
+import { CardImg, CardsContainer, ProductCardContainer, Legendas } from "./productCardStyle";
 import img from './github.png'
 
 export const ProductCard = () => {
@@ -35,6 +35,12 @@ export const ProductCard = () => {
                 <button>Adicionar</button>
             </CardsContainer>
 
+            <CardsContainer className='card'>
+                <CardImg src={img} alt='legenda'/>
+                <Legendas>testinho</Legendas>
+                <button>Adicionar</button>
+            </CardsContainer>
+            
             <CardsContainer className='card'>
                 <CardImg src={img} alt='legenda'/>
                 <Legendas>testinho</Legendas>

@@ -19,10 +19,21 @@ export const NomePagina = styled.p`
 
 export const Classificar = styled.div`
     display: flex;
+    padding: 0;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 `
 
 export const Seletor = styled.select`
+    width: 100px;
+    height: 20px;
     /* flex-direction: flex-start; */
+`
+
+export const QtdEncontrada = styled.p`
+    display: flex;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
 `
