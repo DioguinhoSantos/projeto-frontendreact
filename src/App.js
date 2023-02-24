@@ -3,7 +3,7 @@ import { Home } from './Components/Home/Home';
 import { Container } from './styles';
 import { Cart } from './Components/ShoppingCart/Cart/Cart'
 // import { GlobalStyle } from './GlobalStyle';
-import {products} from './Components/Assets/productsList';
+import {products} from './Assets/productsList';
 
 // console.log(products);
 
@@ -16,7 +16,7 @@ function App() {
     </Container>
   );
 }
-console.log(products);
+// console.log(products);
 // console.log(typeof products);
 
 
