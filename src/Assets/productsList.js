@@ -17,6 +17,12 @@ export const products = [
       name: "Item 3",
       value: 500.0,
       imageUrl: "https://picsum.photos/300/335?a=3"
+    },
+    {
+      id: 4,
+      name: "Item 4",
+      value: 250.0,
+      imageUrl: "https://picsum.photos/300/335?a=4"
     }
   ];
 

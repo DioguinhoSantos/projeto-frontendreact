@@ -3,12 +3,14 @@ import { HomeContainer, NomePagina, Classificar, Seletor, QtdEncontrada } from "
 
 export function Home ({products}) {
 
-    console.log(products)
+    const qtd = products.length;
+
+    // console.log(products)
     return (
         <HomeContainer>
             <NomePagina>Home</NomePagina>
             <Classificar>
-                <QtdEncontrada>Quantidade encontrada: zero</QtdEncontrada>
+                <QtdEncontrada>Quantidade encontrada: {qtd}</QtdEncontrada>
                 
                 <Seletor>
                     <option>Selecione...</option>

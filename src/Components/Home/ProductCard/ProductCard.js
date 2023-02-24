@@ -29,44 +29,8 @@ export const ProductCard = ({ products }) => {
 
             {aaa}
 
-            <CardsContainer className='card'>
-                <CardImg src='https://picsum.photos/300/335?a=1' alt='legenda' />
-                <Legendas>testinho</Legendas>
-                <button>Adicionar</button>
-            </CardsContainer>
-
             {/* <CardsContainer className='card'>
-                <CardImg src={img} alt='legenda'/>
-                <Legendas>testinho</Legendas>
-                <button>Adicionar</button>
-            </CardsContainer>
-
-            <CardsContainer className='card'>
-                <CardImg src={img} alt='legenda'/>
-                <Legendas>testinho</Legendas>
-                <button>Adicionar</button>
-            </CardsContainer>
-
-            <CardsContainer className='card'>
-                <CardImg src={img} alt='legenda'/>
-                <Legendas>testinho</Legendas>
-                <button>Adicionar</button>
-            </CardsContainer>
-
-            <CardsContainer className='card'>
-                <CardImg src={img} alt='legenda'/>
-                <Legendas>testinho</Legendas>
-                <button>Adicionar</button>
-            </CardsContainer>
-
-            <CardsContainer className='card'>
-                <CardImg src={img} alt='legenda'/>
-                <Legendas>testinho</Legendas>
-                <button>Adicionar</button>
-            </CardsContainer>
-            
-            <CardsContainer className='card'>
-                <CardImg src={img} alt='legenda'/>
+                <CardImg src='https://picsum.photos/300/335?a=1' alt='legenda' />
                 <Legendas>testinho</Legendas>
                 <button>Adicionar</button>
             </CardsContainer> */}
