@@ -4,13 +4,44 @@ import { Container } from './styles';
 import { Cart } from './Components/ShoppingCart/Cart/Cart'
 // import { GlobalStyle } from './GlobalStyle';
 import {products} from './Assets/productsList';
+import { useState } from 'react';
 
 // console.log(products);
 
 function App() {
+
+  const [minFilter, setMinFilter] = useState('');
+  const [maxFilter, setMaxFilter] = useState('');
+  const [searchFilter, setSearchFilter] = useState('');
+  const [cartState, setCartState] = useState();
+  const [amountState, setAmountState] = useState();
+
+  const OCMinFilter = (e) => {
+    setMinFilter(e.target.value);
+  }
+
+  const OCMaxFilter = (e) => {
+    setMaxFilter(e.target.value);
+  }
+
+  const OCSearchFilter = (e) => {
+    setSearchFilter(e.target.value);
+  }
+
+  console.log(minFilter);
+  console.log(maxFilter);
+  console.log(searchFilter);
+
   return (
     <Container>
-      <Filters />
+      <Filters 
+      minFilter={minFilter}
+      OCMinFilter={OCMinFilter}
+      maxFilter={maxFilter}
+      OCMaxFilter={OCMaxFilter}
+      searchFilter={searchFilter}
+      OCSearchFilter={OCSearchFilter}
+      />
       <Home products={products}/>
       <Cart/>
     </Container>
