@@ -1,7 +1,7 @@
 import Items from "../Items/Items";
 import { CartContainer } from "./cartStyle";
 
-export const Cart = () => {
+export const Cart = (cartState, OCCartState) => {
     return (
         <CartContainer>
             <p>Zero itens no carrinho</p>

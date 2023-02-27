@@ -2,7 +2,7 @@ import { FilterContainer } from "./filtersStyle";
 
 export const Filters = ({minFilter, OCMinFilter, maxFilter, OCMaxFilter, searchFilter, OCSearchFilter}) => {
     return (
-        <FilterContainer minFilter={minFilter}>
+        <FilterContainer>
             <p>Filters</p>
 
             <label htmlFor="filtro">
