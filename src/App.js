@@ -3,7 +3,7 @@ import { Home } from './Components/Home/Home';
 import { Container } from './styles';
 import { Cart } from './Components/ShoppingCart/Cart/Cart'
 // import { GlobalStyle } from './GlobalStyle';
-import {products} from './Assets/productsList';
+import { products } from './Assets/productsList';
 import { useState } from 'react';
 
 // console.log(products);
@@ -28,12 +28,21 @@ function App() {
     setSearchFilter(e.target.value);
   }
 
-  console.log(minFilter);
-  console.log(maxFilter);
-  console.log(searchFilter);
+  const OCCartState = (e) => {
+    setCartState(e.target.value);
+  }
+
+  const OCAmountState = (e) => {
+    setAmountState(e.target.value);
+  }
+
+  // console.log(minFilter);
+  // console.log(maxFilter);
+  // console.log(searchFilter);
 
   return (
     <Container>
+
       <Filters 
       minFilter={minFilter}
       OCMinFilter={OCMinFilter}
@@ -42,14 +51,19 @@ function App() {
       searchFilter={searchFilter}
       OCSearchFilter={OCSearchFilter}
       />
+
       <Home products={products}/>
-      <Cart/>
+
+      <Cart
+      cartState={cartState}
+      OCCartState={OCCartState}
+      amountState={amountState}
+      OCAmountState={OCAmountState}
+      />
+
     </Container>
   );
 }
-// console.log(products);
-// console.log(typeof products);
-
 
 export default App;
 

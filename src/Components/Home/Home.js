@@ -2,31 +2,32 @@ import ProductCard from "./ProductCard/ProductCard";
 import { HomeContainer, NomePagina, Classificar, Seletor, QtdEncontrada } from "./homeStyle";
 import { useState } from "react";
 
-export function Home ({products}) {
+export function Home({ products }) {
 
-    const [ordination, setOrdination] = useState();
+    const [ordination, setOrdination] = useState('');
 
     const OCOrdination = (e) => {
-        setOrdination = e.target.value;
-      }
+        setOrdination(e.target.value);
+    }
 
+    console.log(ordination)
+    
     const qtd = products.length;
 
-    // console.log(products)
     return (
         <HomeContainer>
             <NomePagina>Home</NomePagina>
-            <Classificar>
+            <Classificar ordination={ordination} OCOrdination={OCOrdination}>
                 <QtdEncontrada>Quantidade encontrada: {qtd}</QtdEncontrada>
-                
-                <Seletor>
-                    <option>Selecione...</option>
-                    <option>Crescente</option>
-                    <option>Decrescente</option>
+
+                <Seletor id='testando' onChange={OCOrdination} value={ordination}>
+                    <option >Selecione...</option>
+                    <option >Crescente</option>
+                    <option >Decrescente</option>
                 </Seletor>
-        
+
             </Classificar>
-            <ProductCard products={products}/>
+            <ProductCard products={products} />
         </HomeContainer>
     );
 }
