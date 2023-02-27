@@ -10,13 +10,14 @@ export function Home({ products }) {
         setOrdination(e.target.value);
     }
 
-    console.log(ordination)
+    // console.log(ordination)
     
     const qtd = products.length;
 
     return (
         <HomeContainer>
             <NomePagina>Home</NomePagina>
+
             <Classificar ordination={ordination} OCOrdination={OCOrdination}>
                 <QtdEncontrada>Quantidade encontrada: {qtd}</QtdEncontrada>
 
@@ -25,8 +26,8 @@ export function Home({ products }) {
                     <option >Crescente</option>
                     <option >Decrescente</option>
                 </Seletor>
-
             </Classificar>
+
             <ProductCard products={products} />
         </HomeContainer>
     );
