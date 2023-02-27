@@ -1,7 +1,14 @@
 import ProductCard from "./ProductCard/ProductCard";
 import { HomeContainer, NomePagina, Classificar, Seletor, QtdEncontrada } from "./homeStyle";
+import { useState } from "react";
 
 export function Home ({products}) {
+
+    const [ordination, setOrdination] = useState();
+
+    const OCOrdination = (e) => {
+        setOrdination = e.target.value;
+      }
 
     const qtd = products.length;
 
