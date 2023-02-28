@@ -61,6 +61,7 @@ function App() {
       OCCartState={OCCartState}
       amountState={amountState}
       OCAmountState={OCAmountState}
+      addCart={addCart}
       />
 
       <Cart

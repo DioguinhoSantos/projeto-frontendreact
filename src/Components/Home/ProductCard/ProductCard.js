@@ -1,14 +1,14 @@
 import { CardImg, CardsContainer, ProductCardContainer, Legendas, Botão } from "./productCardStyle";
 // import { useState } from "react";
 
-export const ProductCard = ({ products }) => {
+export const ProductCard = ({ products, addCart}) => {
 
     let aaa = products.map((card, index) => {
         return (
             <CardsContainer key={index}>
                 <CardImg src={card.imageUrl} alt='aaaaa' />
                 <Legendas>testinho</Legendas>
-                <Botão onClick={addCart()}>Adicionar</Botão>
+                <Botão onClick={addCart}>Adicionar</Botão>
             </CardsContainer>
         )
     })

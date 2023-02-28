@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard/ProductCard";
 import { HomeContainer, NomePagina, Classificar, Seletor, QtdEncontrada } from "./homeStyle";
 import { useState } from "react";
 
-export function Home({ products, cartState, OCCartState, amountState, OCAmountState }) {
+export function Home({ products, cartState, OCCartState, amountState, OCAmountState, addCart }) {
 
     const [ordination, setOrdination] = useState('');
 
@@ -16,13 +16,22 @@ export function Home({ products, cartState, OCCartState, amountState, OCAmountSt
 
     return (
         <HomeContainer>
-            <NomePagina>Home</NomePagina>
+            <NomePagina>
+                Home
+            </NomePagina>
 
-            <Classificar ordination={ordination} OCOrdination={OCOrdination}>
+            <Classificar 
+            ordination={ordination} 
+            OCOrdination={OCOrdination}>
 
-                <QtdEncontrada>Quantidade encontrada: {qtd}</QtdEncontrada>
+                <QtdEncontrada>
+                    Quantidade encontrada: {qtd}
+                </QtdEncontrada>
 
-                <Seletor id='testando' onChange={OCOrdination} value={ordination}>
+                <Seletor 
+                id='testando' 
+                onChange={OCOrdination} 
+                value={ordination}>
                     <option >Selecione...</option>
                     <option >Crescente</option>
                     <option >Decrescente</option>
@@ -30,7 +39,10 @@ export function Home({ products, cartState, OCCartState, amountState, OCAmountSt
 
             </Classificar>
 
-            <ProductCard products={products}/>
+            <ProductCard 
+            products={products} 
+            addCart={addCart}
+            />
         </HomeContainer>
     );
 }
