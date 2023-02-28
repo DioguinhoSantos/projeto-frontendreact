@@ -8,7 +8,7 @@ export const ProductCard = ({ products }) => {
             <CardsContainer key={index}>
                 <CardImg src={card.imageUrl} alt='aaaaa' />
                 <Legendas>testinho</Legendas>
-                <Botão>Adicionar</Botão>
+                <Botão onClick={addCart()}>Adicionar</Botão>
             </CardsContainer>
         )
     })

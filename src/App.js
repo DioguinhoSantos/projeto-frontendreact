@@ -36,6 +36,9 @@ function App() {
     setAmountState(e.target.value);
   }
 
+  const addCart = () => {
+    console.log('a')
+}
   // console.log(minFilter);
   // console.log(maxFilter);
   // console.log(searchFilter);

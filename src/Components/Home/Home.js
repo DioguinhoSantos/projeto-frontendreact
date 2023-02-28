@@ -19,6 +19,7 @@ export function Home({ products, cartState, OCCartState, amountState, OCAmountSt
             <NomePagina>Home</NomePagina>
 
             <Classificar ordination={ordination} OCOrdination={OCOrdination}>
+
                 <QtdEncontrada>Quantidade encontrada: {qtd}</QtdEncontrada>
 
                 <Seletor id='testando' onChange={OCOrdination} value={ordination}>
@@ -26,9 +27,10 @@ export function Home({ products, cartState, OCCartState, amountState, OCAmountSt
                     <option >Crescente</option>
                     <option >Decrescente</option>
                 </Seletor>
+
             </Classificar>
 
-            <ProductCard products={products} />
+            <ProductCard products={products}/>
         </HomeContainer>
     );
 }

@@ -33,7 +33,9 @@ export const Filters = ({minFilter, OCMinFilter, maxFilter, OCMaxFilter, searchF
                 <input 
                 name="nome" 
                 id="nome" 
-                placeholder="Ex.: Cleiton" onChange={OCSearchFilter} value={searchFilter}/>
+                placeholder="Ex.: Cleiton"
+                type='text'
+                onChange={OCSearchFilter} value={searchFilter}/>
             <br />
 
         </FilterContainer>
