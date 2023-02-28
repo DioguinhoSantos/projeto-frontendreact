@@ -27,3 +27,9 @@ export const Legendas = styled.p`
     font-size: 14px;
     padding: 0rem;
 `
+
+export const Botão = styled.button`
+    font-size: 12px;
+    padding: 0.25rem;
+    cursor: pointer;
+`

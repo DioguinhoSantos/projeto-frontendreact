@@ -11,6 +11,7 @@ export const HomeContainer = styled.div`
     /* align-items: stretch; */
     /* text-align: center; */
     justify-items: flex-start;
+    max-width: 60%;
 `
 
 export const NomePagina = styled.p`

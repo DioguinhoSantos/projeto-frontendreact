@@ -8,6 +8,7 @@ export const FilterContainer = styled.div`
     border: 1px solid;
     box-sizing: border-box;
     flex-direction: column;
+    max-width: 20%;
     /* justify-content: space-between; */
 
 `
