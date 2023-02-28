@@ -1,13 +1,7 @@
 import { CardImg, CardsContainer, ProductCardContainer, Legendas } from "./productCardStyle";
-// import img from './github.png'
 // import { useState } from "react";
 
 export const ProductCard = ({ products }) => {
-
-
-    // const [listaCards, setListaCards] = useState('');
-
-    // setListaCards(products);
 
     let aaa = products.map((card, index) => {
         return (
@@ -20,7 +14,6 @@ export const ProductCard = ({ products }) => {
     })
 
     // console.log(products)
-
     // console.log()
     // console.log(typeof products)
 
