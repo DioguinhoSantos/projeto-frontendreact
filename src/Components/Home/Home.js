@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard/ProductCard";
 import { HomeContainer, NomePagina, Classificar, Seletor, QtdEncontrada } from "./homeStyle";
 import { useState } from "react";
 
-export function Home({ products }) {
+export function Home({ products, cartState, OCCartState, amountState, OCAmountState }) {
 
     const [ordination, setOrdination] = useState('');
 

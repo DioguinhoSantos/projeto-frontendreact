@@ -1,4 +1,4 @@
-import { CardImg, CardsContainer, ProductCardContainer, Legendas } from "./productCardStyle";
+import { CardImg, CardsContainer, ProductCardContainer, Legendas, Botão } from "./productCardStyle";
 // import { useState } from "react";
 
 export const ProductCard = ({ products }) => {
@@ -8,7 +8,7 @@ export const ProductCard = ({ products }) => {
             <CardsContainer key={index}>
                 <CardImg src={card.imageUrl} alt='aaaaa' />
                 <Legendas>testinho</Legendas>
-                <button>Adicionar</button>
+                <Botão>Adicionar</Botão>
             </CardsContainer>
         )
     })

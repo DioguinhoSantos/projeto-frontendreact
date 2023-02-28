@@ -13,7 +13,7 @@ function App() {
   const [minFilter, setMinFilter] = useState('');
   const [maxFilter, setMaxFilter] = useState('');
   const [searchFilter, setSearchFilter] = useState('');
-  const [cartState, setCartState] = useState();
+  const [cartState, setCartState] = useState('Zero itens no carrinho');
   const [amountState, setAmountState] = useState();
 
   const OCMinFilter = (e) => {
@@ -52,7 +52,13 @@ function App() {
       OCSearchFilter={OCSearchFilter}
       />
 
-      <Home products={products}/>
+      <Home 
+      products={products}
+      cartState={cartState}
+      OCCartState={OCCartState}
+      amountState={amountState}
+      OCAmountState={OCAmountState}
+      />
 
       <Cart
       cartState={cartState}
