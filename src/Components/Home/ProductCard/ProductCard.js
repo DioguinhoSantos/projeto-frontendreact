@@ -1,9 +1,18 @@
 import { CardImg, CardsContainer, ProductCardContainer, Legendas, Botão } from "./productCardStyle";
 // import { useState } from "react";
 
-export const ProductCard = ({ products, addCart}) => {
+export const ProductCard = ({ products, cartState, setCartState }) => {
 
+    
     let aaa = products.map((card, index) => {
+        
+        const addCart = () => {
+            // console.log(card.name)
+            const addItem = [...cartState, card];
+            console.log(addItem);
+            setCartState(addItem);
+    
+        }
         return (
             <CardsContainer key={index}>
                 <CardImg src={card.imageUrl} alt='aaaaa' />
@@ -11,7 +20,9 @@ export const ProductCard = ({ products, addCart}) => {
                 <Botão onClick={addCart}>Adicionar</Botão>
             </CardsContainer>
         )
-    })
+    }
+    
+    )
 
     // console.log(products)
     // console.log()

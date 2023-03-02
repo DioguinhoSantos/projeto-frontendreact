@@ -11,7 +11,7 @@ export const CartContainer = styled.div`
     max-width: 20%;
 `
 
-export const LittleCart = styled.p`
+export const LittleCart = styled.div`
     text-align: start;
     border: 1px solid;
     padding: 0.5rem;

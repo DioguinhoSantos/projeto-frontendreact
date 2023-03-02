@@ -5,13 +5,15 @@ export const Cart = ({cartState, OCCartState, amountState, OCAmountState}) => {
 
     return (
         <CartContainer>
-            <LittleCart>
-            {cartState}
-            </LittleCart>
+            <Items />
 
             <Botão>Remover</Botão>
+
+            <LittleCart>
             
-            <Items />
+            </LittleCart>
+
+            
         </CartContainer>
     );
 }

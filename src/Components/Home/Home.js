@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard/ProductCard";
 import { HomeContainer, NomePagina, Classificar, Seletor, QtdEncontrada } from "./homeStyle";
 import { useState } from "react";
 
-export function Home({ products, cartState, OCCartState, amountState, OCAmountState, addCart }) {
+export function Home({ products, cartState, setCartState, OCCartState, amountState, OCAmountState, addCart }) {
 
     const [ordination, setOrdination] = useState('');
 
@@ -41,7 +41,9 @@ export function Home({ products, cartState, OCCartState, amountState, OCAmountSt
 
             <ProductCard 
             products={products} 
-            addCart={addCart}
+            cartState={cartState}
+            setCartState={setCartState}
+            OCCartState={OCCartState}
             />
         </HomeContainer>
     );
