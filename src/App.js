@@ -13,8 +13,11 @@ function App() {
   const [minFilter, setMinFilter] = useState('');
   const [maxFilter, setMaxFilter] = useState('');
   const [searchFilter, setSearchFilter] = useState('');
-  const [cartState, setCartState] = useState('Zero itens no carrinho');
+  const [cartState, setCartState] = useState([]);
   const [amountState, setAmountState] = useState();
+  // const [novoItem, setNovoItem] = useState();
+
+  console.log(cartState)
 
   const OCMinFilter = (e) => {
     setMinFilter(e.target.value);
@@ -28,17 +31,10 @@ function App() {
     setSearchFilter(e.target.value);
   }
 
-  const OCCartState = (e) => {
-    setCartState(e.target.value);
-  }
-
   const OCAmountState = (e) => {
     setAmountState(e.target.value);
   }
 
-  const addCart = () => {
-    console.log('a')
-}
   // console.log(minFilter);
   // console.log(maxFilter);
   // console.log(searchFilter);
@@ -58,15 +54,14 @@ function App() {
       <Home 
       products={products}
       cartState={cartState}
-      OCCartState={OCCartState}
+      setCartState={setCartState}
       amountState={amountState}
       OCAmountState={OCAmountState}
-      addCart={addCart}
       />
 
       <Cart
       cartState={cartState}
-      OCCartState={OCCartState}
+      setCartState={setCartState}
       amountState={amountState}
       OCAmountState={OCAmountState}
       />
