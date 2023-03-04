@@ -1,18 +1,15 @@
 import Items from "../Items/Items";
-import { Botão, CartContainer, LittleCart } from "./cartStyle";
+import { CartContainer} from "./cartStyle";
 
-export const Cart = ({cartState, OCCartState, amountState, OCAmountState}) => {
+export const Cart = ({ cartState, amountState, setAmountState }) => {
 
     return (
         <CartContainer>
-            <Items />
-
-            <Botão>Remover</Botão>
-
-            <LittleCart>
-            
-            </LittleCart>
-
+            <Items
+            cartState={cartState}
+            amountState={amountState}
+            setAmountState={setAmountState}
+            />
             
         </CartContainer>
     );

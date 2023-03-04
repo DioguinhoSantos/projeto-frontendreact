@@ -14,10 +14,10 @@ function App() {
   const [maxFilter, setMaxFilter] = useState('');
   const [searchFilter, setSearchFilter] = useState('');
   const [cartState, setCartState] = useState([]);
-  const [amountState, setAmountState] = useState();
+  const [amountState, setAmountState] = useState(0);
   // const [novoItem, setNovoItem] = useState();
 
-  console.log(cartState)
+  // console.log(cartState)
 
   const OCMinFilter = (e) => {
     setMinFilter(e.target.value);
@@ -63,6 +63,7 @@ function App() {
       cartState={cartState}
       setCartState={setCartState}
       amountState={amountState}
+      setAmountState={setAmountState}
       OCAmountState={OCAmountState}
       />
 

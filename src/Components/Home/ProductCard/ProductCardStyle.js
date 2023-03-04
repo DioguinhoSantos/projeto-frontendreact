@@ -23,6 +23,7 @@ export const CardsContainer = styled.div`
     padding: 0.5rem;
     margin-bottom: 0.5rem;
 `
+
 export const Legendas = styled.p`
     font-size: 14px;
     padding: 0rem;

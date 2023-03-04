@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const FilterContainer = styled.div`
     display: flex;
     /* align-items: flex-start; */
+    flex-basis: 20%;
     padding: 0.5rem;
     margin: 0.5rem;
     border: 1px solid;
     box-sizing: border-box;
     flex-direction: column;
-    max-width: 20%;
+    /* width: 20em */
     /* justify-content: space-between; */
 
 `

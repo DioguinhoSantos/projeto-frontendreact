@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
     display: flex;
-    flex-grow: 1;
+    box-sizing: border-box;
+    flex-basis: 60%;
     flex-direction: column;
     padding: 0.5rem;
     margin: 0.5rem;
@@ -11,7 +12,7 @@ export const HomeContainer = styled.div`
     /* align-items: stretch; */
     /* text-align: center; */
     justify-items: flex-start;
-    max-width: 60%;
+    /* width: 60em; */
 `
 
 export const NomePagina = styled.p`
