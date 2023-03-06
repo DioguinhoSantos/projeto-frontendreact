@@ -9,8 +9,6 @@ export function Home({ products, cartState, setCartState, OCCartState, amountSta
     const OCOrdination = (e) => {
         setOrdination(e.target.value);
     }
-
-    // console.log(ordination)
     
     const qtd = products.length;
 
