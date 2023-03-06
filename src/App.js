@@ -2,11 +2,8 @@ import Filters from './Components/Filters/Filters';
 import { Home } from './Components/Home/Home';
 import { Container } from './styles';
 import { Cart } from './Components/ShoppingCart/Cart/Cart'
-// import { GlobalStyle } from './GlobalStyle';
 import { products } from './Assets/productsList';
 import { useState } from 'react';
-
-// console.log(products);
 
 function App() {
 
@@ -15,9 +12,6 @@ function App() {
   const [searchFilter, setSearchFilter] = useState('');
   const [cartState, setCartState] = useState([]);
   const [amountState, setAmountState] = useState(0);
-  // const [novoItem, setNovoItem] = useState();
-
-  // console.log(cartState)
 
   const OCMinFilter = (e) => {
     setMinFilter(e.target.value);
@@ -35,9 +29,9 @@ function App() {
     setAmountState(e.target.value);
   }
 
-  // console.log(minFilter);
-  // console.log(maxFilter);
-  // console.log(searchFilter);
+  // const filtrado = products.filter(function(obj) { return obj.id === 2;})
+
+  // console.log(filtrado);
 
   return (
     <Container>

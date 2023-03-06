@@ -24,6 +24,7 @@ export const products = [
       value: 250.0,
       imageUrl: "https://picsum.photos/300/335?a=4"
     }
+    
   ];
 
 export default products;
