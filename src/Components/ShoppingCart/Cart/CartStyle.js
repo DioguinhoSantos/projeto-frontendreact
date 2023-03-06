@@ -3,12 +3,12 @@ import styled from 'styled-components'
 export const CartContainer = styled.div`
     display: flex;
     flex-direction: column;
+    flex-basis: 20%;
     padding: 0.5rem;
     margin: 0.5rem;
     text-align: center;
-    align-items: center;
+    align-items: stretch;
     border: 1px solid;
-    max-width: 20%;
 `
 
 export const LittleCart = styled.div`
@@ -17,10 +17,3 @@ export const LittleCart = styled.div`
     padding: 0.5rem;
 `
 
-export const Botão = styled.button`
-    font-size: 12px;
-    width: 100px;
-    padding: 0.25rem;
-    cursor: pointer;
-
-`
