@@ -4,54 +4,42 @@ import { useState } from "react";
 export const ProductCard = ({ products, cartState, setCartState }) => {
 
     const [stateQuant, setStateQuant] = useState(0);
+    const [novoItem, setNovoItem] = useState('');
 
     const OCStateQuant = (e) => {
         setStateQuant(e.target.value);
     }
 
+    // const OCNovoItem = (e) => {
+    //     setStateQuant(e.target.value);
+    // }
+
+
+
     let aaa = products
-    
     .map((card, index) => {
         
         const addCart = () => {
-
-            // if(card.quantity = 0) {
-            //     card.quantity = 1; 
-
-            // }
-
-            // if(card.quantity > 0) {
-            //     card.quantity += 1;
-            // }
-            // const filtrado = cartState.filter(function(obj) { return obj.id === 1;})
-
             
-            
-            // console.log(typeof filtrado)
+            card.quantity = 1;
+            const novoItem2 = [card];
+            const idFiltrado = novoItem2[0].id;
 
-            // console.log(aaa)
-            // const testinho = cartState.filter(teste )
-            
-            // console.log(testinho);
+            // console.log(novoItem2.length);
+
+            for ( let g = 0 ; g <= cartState.length ; g++ ) {
+                if ( idFiltrado === cartState[g].id ) {
+                    card.quantity += 1;            
+                }
+                if ( idFiltrado !== cartState[g].id ) {
+                    
+                }
+            }
 
             const addItem = [...cartState, card];
             // console.log(addItem);
             setCartState(addItem);
-
-            // const filtrado = cartState.filter(function(obj) {
-            // return obj.id === 1})
-            
-            // console.log(filtrado[0].id);
-
-            // cartState.filter(function(obj) { return obj.id })
-
-            // console.log(cartState.filter((filtrads) => {
-            //     return filtrads.id === 1
-            // }))
-
-            // console.log(card.id)
-
-    
+            console.log(cartState[0].id)
         }
         return (
             <CardsContainer key={index}>
@@ -77,7 +65,7 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
                 
             </CardsContainer>
         )
-    }
+        }
     
     )
 
@@ -97,3 +85,40 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
 }
 
 export default ProductCard;
+
+
+// códigos a analisar
+
+            // if(card.quantity = 0) {
+            //     card.quantity = 1; 
+
+            // }
+
+            // if(card.quantity > 0) {
+            //     card.quantity += 1;
+            // }
+            // const filtrado = cartState.filter(function(obj) { return obj.id === 1;})
+
+            
+            
+            // console.log(typeof filtrado)
+
+            // console.log(aaa)
+            // const testinho = cartState.filter(teste )
+            
+            // console.log(testinho);
+
+            // const filtrado = cartState.filter(function(obj) {
+            // return obj.id === 1})
+            
+            // console.log(filtrado[0].id);
+
+            // cartState.filter(function(obj) { return obj.id })
+
+            // console.log(cartState.filter((filtrads) => {
+            //     return filtrads.id === 1
+            // }))
+
+            // console.log(card.id)
+
+    
