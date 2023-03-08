@@ -13,9 +13,16 @@ import {
 export const Items = ({ cartState, setAmountState, amountState }) => {
 
     let soma = 0;
+    let carrinho =[];
 
-    let carrinho = cartState.map((item, index) => {
-
+    carrinho = cartState.map((item, index) => {
+    //     for ( let i = 0 ; i <= carrinho.length ; i++ ) {
+    //         if( item.id === carrinho[i].id) {
+    //             item.id += 1;
+    //         }
+        
+    // }
+        // console.log(carrinho[carrinho.length -1].id)
         soma = soma + item.value;
 
         setAmountState(soma);

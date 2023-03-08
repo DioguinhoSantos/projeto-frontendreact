@@ -3,12 +3,12 @@ import { useState } from "react";
 
 export const ProductCard = ({ products, cartState, setCartState }) => {
 
-    const [stateQuant, setStateQuant] = useState(0);
+    // const [stateQuant, setStateQuant] = useState(1);
     const [novoItem, setNovoItem] = useState('');
 
-    const OCStateQuant = (e) => {
-        setStateQuant(e.target.value);
-    }
+    // const OCStateQuant = (e) => {
+    //     setStateQuant(e.target.value);
+    // }
 
     // const OCNovoItem = (e) => {
     //     setStateQuant(e.target.value);
@@ -21,25 +21,28 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
         
         const addCart = () => {
             
-            card.quantity = 1;
-            const novoItem2 = [card];
-            const idFiltrado = novoItem2[0].id;
-
+            // const novoItem2 = [card];
+            // const idFiltrado = novoItem2[0].id;
+            
             // console.log(novoItem2.length);
-
-            for ( let g = 0 ; g <= cartState.length ; g++ ) {
-                if ( idFiltrado === cartState[g].id ) {
-                    card.quantity += 1;            
-                }
-                if ( idFiltrado !== cartState[g].id ) {
-                    
-                }
-            }
-
-            const addItem = [...cartState, card];
-            // console.log(addItem);
-            setCartState(addItem);
-            console.log(cartState[0].id)
+            
+            // for ( let g = 0 ; g <= cartState.length ; g++ ) {
+                //     if ( idFiltrado === cartState[g].id ) {
+                    //         card.quantity += 1;            
+                    //     }
+                    //     if ( idFiltrado !== cartState[g].id ) {
+                        
+                        //     }
+                        // }
+                        
+                        let addItem = [...cartState, card];
+                        card.quantity = 1;
+                        // console.log(addItem);
+                        setCartState(addItem);
+                        console.log(addItem);
+                        addItem = [];
+                        console.log(addItem);
+                        
         }
         return (
             <CardsContainer key={index}>
@@ -51,12 +54,12 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
 
                 <Legendas>testinho</Legendas>
 
-                <Quant 
+                {/* <Quant key={index}
                 type='number' 
                 min={0} 
                 placeholder='Quantidade' 
                 value={stateQuant} 
-                onChange={OCStateQuant}/>
+                onChange={OCStateQuant}/> */}
 
                 <Botão 
                 onClick={addCart}>
