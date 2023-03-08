@@ -1,24 +1,18 @@
 import { CardImg, CardsContainer, ProductCardContainer, Legendas, Botão, Quant } from "./productCardStyle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const ProductCard = ({ products, cartState, setCartState }) => {
 
-    // const [stateQuant, setStateQuant] = useState(1);
-    const [novoItem, setNovoItem] = useState('');
-
-    // const OCStateQuant = (e) => {
-    //     setStateQuant(e.target.value);
-    // }
-
-    // const OCNovoItem = (e) => {
-    //     setStateQuant(e.target.value);
-    // }
-
-
+    useEffect(
+        () =>  console.log(cartState[0].id)
+                
+    )
 
     let aaa = products
     .map((card, index) => {
         
+
+
         const addCart = () => {
             
             // const novoItem2 = [card];
@@ -34,15 +28,31 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
                         
                         //     }
                         // }
-                        
-                        let addItem = [...cartState, card];
-                        card.quantity = 1;
-                        // console.log(addItem);
-                        setCartState(addItem);
-                        console.log(addItem);
-                        addItem = [];
-                        console.log(addItem);
-                        
+                        for ( let i = 0 ; i <= cartState.length ; i++ ) {
+                            let checaId = card.id;
+                            // console.log(checaId);
+
+                            // if ( cartState[i].id === checaId ) {
+
+                            // }
+                            
+                            if (cartState.length === 0) {
+                                card.quantity = 1;
+                                let addItem = [...cartState, card];
+                                setCartState(addItem);
+                                console.log(addItem);
+                                addItem = [];
+                            }
+                            if (cartState.length !== 0) {
+                                console.log('for funcionando');
+                                card.quantity = card.quantity + 1;
+                                let addItem = [...cartState, card];
+                                setCartState(addItem);
+                                console.log(addItem);
+                                addItem = [];
+                            }
+                        }
+
         }
         return (
             <CardsContainer key={index}>
