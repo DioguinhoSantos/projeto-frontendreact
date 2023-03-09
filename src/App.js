@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [updates, setUpdates] = useState(0);
+  const [updates] = useState(0);
 
   const [minFilter, setMinFilter] = useState('');
   const [maxFilter, setMaxFilter] = useState('');
