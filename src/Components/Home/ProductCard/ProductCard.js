@@ -2,118 +2,57 @@ import { CardImg, CardsContainer, ProductCardContainer, Legendas, Botão } from 
 
 export const ProductCard = ({ products, cartState, setCartState }) => {
 
-    // useEffect(
-    //     () =>  console.log(cartState[0])
-                
-    // )
-
     let aaa = products
     .map((card, index) => {
-        
-
 
         const addCart = () => {
             
-            // const novoItem2 = [card];
-            // const idFiltrado = novoItem2[0].id;
-            
-            // console.log(novoItem2.length);
-            
-            // for ( let g = 0 ; g <= cartState.length ; g++ ) {
-                //     if ( idFiltrado === cartState[g].id ) {
-                    //         card.quantity += 1;            
-                    //     }
-                    //     if ( idFiltrado !== cartState[g].id ) {
+            let checaId = card.id;
+            let temNoCarrinho = false
+            let checaCarrinho = [...cartState]
+            let addItem = [];
+
+            if ( checaCarrinho.length > 0 ) {
+
+                for (let itemNoCarrinho of checaCarrinho) {
+
+                    if (checaId === itemNoCarrinho.id){
+                        temNoCarrinho = true;
+                        break;
+                    }
                         
-                        //     }
-                        // }
-                        
+                    if (checaId !== itemNoCarrinho.id){
+                        temNoCarrinho = false;
+                    }
+
+                }
+
+                if (temNoCarrinho === false) {
+                    card.quantity = 1;
+                    addItem = [...cartState, card];
+                    setCartState(addItem);
+                    console.log(addItem);
+                }
+
+                else {
+                    card.quantity += 1;
+                    addItem = [...cartState];
+                    setCartState(addItem);
+                    console.log(addItem);                       
+                }
+
+            }                            
+
+            else {                                
+                card.quantity = 1;                                
+                addItem = [...cartState, card];                                
+                console.log(addItem);                                
+                setCartState(addItem);
+            }
                             
-                            //pegou o id do item que to add no carrinho
-                            let checaId = card.id;
-                            
-
-                            
-                                
-                                let checaCarrinho = [...cartState];
-
-                                if ( checaCarrinho.length > 0 ) {
-
-                                    console.log(checaCarrinho.length);
-                                    console.log(checaId);
-
-                                    for (let itemNoCarrinho of checaCarrinho) {
-
-                                        let addItem = [];
-                                        console.log(itemNoCarrinho);
-
-                                    if (itemNoCarrinho.id === checaId) {
-                                    card.quantity += 1;
-                                    addItem = [...cartState];
-                                    setCartState(addItem);
-                                    console.log(addItem);
-                                    checaCarrinho = [...cartState];
-                                    addItem = [];                        
-                                    }
-
-                                    else {
-                                    card.quantity = 1;
-                                    addItem = [...cartState, card];
-                                    setCartState(addItem);
-                                    console.log(addItem);
-                                    checaCarrinho = [...cartState];
-                                    addItem = [];
-                                    }
-
-                                    }
-                                }                            
-
-                                else {
-                                
-                                card.quantity = 1;
-                                
-                                let addItem = [...cartState, card];
-                                
-                                console.log(addItem);
-                                
-                                setCartState(addItem);
-                                
-                                addItem = [];
-
-                            }
-                            
-                            
-                            
-                            
-                            // let pegaId = [...cartState[i].id];
-                            // if (cartState === true) {
-                                //     console.log('alaudeeee')
-                                // }
-                                // console.log(checaId);
-                                
-                                // console.log(checaId);
-                                
-                                // if ( cartState[i].id === checaId ) {
-                                    
-                                    // }
-                                    
-                                    // if (cartState.length === 0) {
-                                        // for (let qualquer of addItem) {
-                                        //     console.log(qualquer.name)
-                                        // }
-                            
-                            // if (cartState.length !== 0) {
-                            //     console.log('for funcionando');
-                                // console.log(typeof cartState);
-                                // card.quantity = card.quantity + 1;
-                                // let addItem = [...cartState, card];
-                                // setCartState(addItem);
-                                // console.log(addItem);
-                                // addItem = [];
-                            
-                        
 
         }
+
         return (
             <CardsContainer key={index}>
 
@@ -138,7 +77,7 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
                 
             </CardsContainer>
         )
-        }
+    }
     
     )
 
@@ -194,4 +133,33 @@ export default ProductCard;
 
             // console.log(card.id)
 
-    
+                                
+                            
+                            
+                            // let pegaId = [...cartState[i].id];
+                            // if (cartState === true) {
+                                //     console.log('alaudeeee')
+                                // }
+                                // console.log(checaId);
+                                
+                                // console.log(checaId);
+                                
+                                // if ( cartState[i].id === checaId ) {
+                                    
+                                    // }
+                                    
+                                    // if (cartState.length === 0) {
+                                        // for (let qualquer of addItem) {
+                                        //     console.log(qualquer.name)
+                                        // }
+                            
+                            // if (cartState.length !== 0) {
+                            //     console.log('for funcionando');
+                                // console.log(typeof cartState);
+                                // card.quantity = card.quantity + 1;
+                                // let addItem = [...cartState, card];
+                                // setCartState(addItem);
+                                // console.log(addItem);
+                                // addItem = [];
+                            
+                        
