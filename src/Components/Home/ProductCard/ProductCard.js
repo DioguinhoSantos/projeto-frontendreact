@@ -1,12 +1,11 @@
-import { CardImg, CardsContainer, ProductCardContainer, Legendas, Botão, Quant } from "./productCardStyle";
-import { useEffect, useState } from "react";
+import { CardImg, CardsContainer, ProductCardContainer, Legendas, Botão } from "./productCardStyle";
 
 export const ProductCard = ({ products, cartState, setCartState }) => {
 
-    useEffect(
-        () =>  console.log(cartState[0].id)
+    // useEffect(
+    //     () =>  console.log(cartState[0])
                 
-    )
+    // )
 
     let aaa = products
     .map((card, index) => {
@@ -28,30 +27,91 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
                         
                         //     }
                         // }
-                        for ( let i = 0 ; i <= cartState.length ; i++ ) {
-                            let checaId = card.id;
-                            // console.log(checaId);
-
-                            // if ( cartState[i].id === checaId ) {
-
-                            // }
+                        
                             
-                            if (cartState.length === 0) {
+                            //pegou o id do item que to add no carrinho
+                            let checaId = card.id;
+                            
+
+                            
+                                
+                                let checaCarrinho = [...cartState];
+
+                                if ( checaCarrinho.length > 0 ) {
+
+                                    console.log(checaCarrinho.length);
+                                    console.log(checaId);
+
+                                    for (let itemNoCarrinho of checaCarrinho) {
+
+                                        let addItem = [];
+                                        console.log(itemNoCarrinho);
+
+                                    if (itemNoCarrinho.id === checaId) {
+                                    card.quantity += 1;
+                                    addItem = [...cartState];
+                                    setCartState(addItem);
+                                    console.log(addItem);
+                                    checaCarrinho = [...cartState];
+                                    addItem = [];                        
+                                    }
+
+                                    else {
+                                    card.quantity = 1;
+                                    addItem = [...cartState, card];
+                                    setCartState(addItem);
+                                    console.log(addItem);
+                                    checaCarrinho = [...cartState];
+                                    addItem = [];
+                                    }
+
+                                    }
+                                }                            
+
+                                else {
+                                
                                 card.quantity = 1;
+                                
                                 let addItem = [...cartState, card];
-                                setCartState(addItem);
+                                
                                 console.log(addItem);
-                                addItem = [];
-                            }
-                            if (cartState.length !== 0) {
-                                console.log('for funcionando');
-                                card.quantity = card.quantity + 1;
-                                let addItem = [...cartState, card];
+                                
                                 setCartState(addItem);
-                                console.log(addItem);
+                                
                                 addItem = [];
+
                             }
-                        }
+                            
+                            
+                            
+                            
+                            // let pegaId = [...cartState[i].id];
+                            // if (cartState === true) {
+                                //     console.log('alaudeeee')
+                                // }
+                                // console.log(checaId);
+                                
+                                // console.log(checaId);
+                                
+                                // if ( cartState[i].id === checaId ) {
+                                    
+                                    // }
+                                    
+                                    // if (cartState.length === 0) {
+                                        // for (let qualquer of addItem) {
+                                        //     console.log(qualquer.name)
+                                        // }
+                            
+                            // if (cartState.length !== 0) {
+                            //     console.log('for funcionando');
+                                // console.log(typeof cartState);
+                                // card.quantity = card.quantity + 1;
+                                // let addItem = [...cartState, card];
+                                // setCartState(addItem);
+                                // console.log(addItem);
+                                // addItem = [];
+                            
+                        
 
         }
         return (
