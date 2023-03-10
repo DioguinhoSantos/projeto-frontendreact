@@ -1,40 +1,44 @@
 import {
     ItemsContainer,
     CarrinhoContainer,
+    CarrinhoMapContainer,
     CartCardImg,
     DescCarrinho,
     Valor,
-    Botão,
+    BotãoLimpar,
     BotãoContainer,
-    ValorTotalContainer
+    ValorTotalContainer,
+    DescQuant,
+    BotãoRemover
     }
     from "./itemsStyle";
 
 export const Items = ({ cartState, setAmountState, amountState }) => {
 
-    let soma = 0;
-    // let carrinho = [];
+    let totalCarrinho = 0;
 
     let carrinho = cartState.map((item, index) => {
-    //     for ( let i = 0 ; i <= carrinho.length ; i++ ) {
-    //         if( item.id === carrinho[i].id) {
-    //             item.id += 1;
-    //         }
-        
-    // }
-        // console.log(typeof carrinho);
 
-        soma = soma + item.value;
+        totalCarrinho = totalCarrinho + item.value*item.quantity;
 
-        setAmountState(soma);
+        setAmountState(totalCarrinho);
 
         return (
             <CarrinhoContainer key={index}>
-                <CartCardImg src={item.imageUrl} alt='aaaaa' />
-                <DescCarrinho>{item.name}</DescCarrinho>
-                <Valor>{item.value}</Valor>
+                <CarrinhoMapContainer>
+                    <CartCardImg src={item.imageUrl} alt='aaaaa' />
+                    <DescCarrinho>
+                        Descrição: {item.name}
+                        <br/>
+                        <br/>
+                        Valor: {item.value}
+                    </DescCarrinho>
+                    <DescQuant>Qtd: {item.quantity}</DescQuant>
+                </CarrinhoMapContainer>
+                    <BotãoRemover>
+                        Remover item
+                    </BotãoRemover>
             </CarrinhoContainer>
-
         )
     }
     )
@@ -43,7 +47,7 @@ export const Items = ({ cartState, setAmountState, amountState }) => {
         <ItemsContainer>
             {carrinho}
             <BotãoContainer>
-                <Botão>Remover</Botão>
+                <BotãoLimpar>Limpar carrinho</BotãoLimpar>
             </BotãoContainer>
             <ValorTotalContainer>
                 <Valor>Valor total: {amountState}</Valor>
