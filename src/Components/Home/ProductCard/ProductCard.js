@@ -1,4 +1,4 @@
-import { CardImg, CardsContainer, ProductCardContainer, Legendas, Botão } from "./productCardStyle";
+import { CardImg, CardsContainer, ProductCardContainer, DescProd, Botão } from "./productCardStyle";
 
 export const ProductCard = ({ products, cartState, setCartState }) => {
 
@@ -61,7 +61,7 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
                 alt='aaaaa'
                 />
 
-                <Legendas>testinho</Legendas>
+                <DescProd>{card.name}</DescProd>
 
                 {/* <Quant key={index}
                 type='number' 

@@ -25,7 +25,7 @@ export const CardsContainer = styled.div`
     margin-bottom: 0.5rem;
 `
 
-export const Legendas = styled.p`
+export const DescProd = styled.p`
     font-size: 12px;
     margin: 0;
     padding: 0rem;
