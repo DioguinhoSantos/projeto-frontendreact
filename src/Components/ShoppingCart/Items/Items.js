@@ -13,15 +13,50 @@ import {
     }
     from "./itemsStyle";
 
-export const Items = ({ cartState, setAmountState, amountState }) => {
+export const Items = ({ cartState, setCartState, setAmountState, amountState }) => {
 
     let totalCarrinho = 0;
-
+    
     let carrinho = cartState.map((item, index) => {
+        
+        
+        const removeItem = () => {
+            
+            if ( item.quantity > 0 ) {
+                
+                item.quantity -= 1;
+                
+                if ( item.quantity === 0 ) {
+                    
+                    cartState.splice(index, 1);
+                    console.log(cartState);
+    
+                }
+
+                let removeItem = [...cartState];
+                setCartState(removeItem);
+
+                    if ( cartState.length === 0 ) {
+
+                        totalCarrinho = 0;
+                        setAmountState(totalCarrinho);
+
+                    }
+                console.log(cartState);
+
+            }
+
+        }
 
         totalCarrinho = totalCarrinho + item.value*item.quantity;
 
-        setAmountState(totalCarrinho);
+        let tratado = totalCarrinho.toFixed(2);
+
+        setAmountState(tratado);
+
+        tratado = '';
+
+        let precoTratado = item.value.toFixed(2);
 
         return (
             <CarrinhoContainer key={index}>
@@ -31,16 +66,17 @@ export const Items = ({ cartState, setAmountState, amountState }) => {
                         Descrição: {item.name}
                         <br/>
                         <br/>
-                        Valor: {item.value}
+                        Valor: R$ {precoTratado}
                     </DescCarrinho>
                     <DescQuant>Qtd: {item.quantity}</DescQuant>
                 </CarrinhoMapContainer>
-                    <BotãoRemover>
+                    <BotãoRemover onClick={removeItem}>
                         Remover item
                     </BotãoRemover>
             </CarrinhoContainer>
         )
     }
+
     )
 
     return (
@@ -50,7 +86,7 @@ export const Items = ({ cartState, setAmountState, amountState }) => {
                 <BotãoLimpar>Limpar carrinho</BotãoLimpar>
             </BotãoContainer>
             <ValorTotalContainer>
-                <Valor>Valor total: {amountState}</Valor>
+                <Valor>Valor total: R$ {amountState}</Valor>
             </ValorTotalContainer>
         </ItemsContainer>
     );

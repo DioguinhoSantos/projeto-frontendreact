@@ -38,13 +38,17 @@ export const CartCardImg = styled.img`
 export const DescCarrinho = styled.p`
     font-size: 10px;
     margin: 0;
-    /* padding-left: 0.25rem; */
+    /* padding-left: 0.1rem; */
     align-items: center;
 `
 
 export const Valor = styled.p`
+    display: flex;
+    justify-content: center;
     font-size: 14px;
-    padding-left: 0.25rem;
+    margin: 0;
+
+    /* padding-left: 0.25rem; */
 `
 
 export const BotãoLimpar = styled.button`
