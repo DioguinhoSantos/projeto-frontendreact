@@ -45,8 +45,10 @@ export const DescCarrinho = styled.p`
 export const Valor = styled.p`
     display: flex;
     justify-content: center;
+    align-content: center;
     font-size: 14px;
     margin: 0;
+    padding: 0;
 
     /* padding-left: 0.25rem; */
 `
@@ -83,7 +85,7 @@ export const BotãoContainer = styled.div`
 export const ValorTotalContainer = styled.div`
     display: flex;
     box-sizing: border-box;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0.5rem;
     justify-items: flex-end;
     border: 1px solid;
@@ -91,4 +93,14 @@ export const ValorTotalContainer = styled.div`
 export const DescQuant = styled.p`
     font-size: 10px;
     padding-left: 0.25rem;
+`
+
+export const UINUmber = styled.p`
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+
+    /* padding-left: 0.25rem; */
 `
