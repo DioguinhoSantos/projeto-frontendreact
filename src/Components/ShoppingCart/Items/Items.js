@@ -1,3 +1,4 @@
+import UINUmber from "../../UINumber";
 import {
     ItemsContainer,
     CarrinhoContainer,
@@ -66,7 +67,7 @@ export const Items = ({ cartState, setCartState, setAmountState, amountState }) 
                         Descrição: {item.name}
                         <br/>
                         <br/>
-                        Valor: R$ {precoTratado}
+                        Valor: R$ <UINUmber format={'0a'}>{precoTratado}</UINUmber>
                     </DescCarrinho>
                     <DescQuant>Qtd: {item.quantity}</DescQuant>
                 </CarrinhoMapContainer>
@@ -86,7 +87,7 @@ export const Items = ({ cartState, setCartState, setAmountState, amountState }) 
                 <BotãoLimpar>Limpar carrinho</BotãoLimpar>
             </BotãoContainer>
             <ValorTotalContainer>
-                <Valor>Valor total: R$ {amountState}</Valor>
+            <Valor>aaaa<UINUmber format={'0,0'}>{amountState}</UINUmber></Valor>
             </ValorTotalContainer>
         </ItemsContainer>
     );
