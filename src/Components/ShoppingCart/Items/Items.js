@@ -10,17 +10,24 @@ import {
     BotãoContainer,
     ValorTotalContainer,
     DescQuant,
-    BotãoRemover
+    DescNome,
+    DescPreco,
+    BotãoRemover,
+    DivPreco
     }
     from "./itemsStyle";
 
 export const Items = ({ cartState, setCartState, setAmountState, amountState }) => {
 
     let totalCarrinho = 0;
+
+    let limpaCarrinho = () => {
+        setCartState([]);
+        setAmountState(0);
+    }
     
     let carrinho = cartState.map((item, index) => {
-        
-        
+
         const removeItem = () => {
             
             if ( item.quantity > 0 ) {
@@ -30,12 +37,11 @@ export const Items = ({ cartState, setCartState, setAmountState, amountState }) 
                 if ( item.quantity === 0 ) {
                     
                     cartState.splice(index, 1);
-                    console.log(cartState);
     
                 }
 
                 let removeItem = [...cartState];
-                setCartState(removeItem);
+                    setCartState(removeItem);
 
                     if ( cartState.length === 0 ) {
 
@@ -43,8 +49,6 @@ export const Items = ({ cartState, setCartState, setAmountState, amountState }) 
                         setAmountState(totalCarrinho);
 
                     }
-                console.log(cartState);
-
             }
 
         }
@@ -64,12 +68,14 @@ export const Items = ({ cartState, setCartState, setAmountState, amountState }) 
                 <CarrinhoMapContainer>
                     <CartCardImg src={item.imageUrl} alt='aaaaa' />
                     <DescCarrinho>
-                        Descrição: {item.name}
-                        <br/>
-                        <br/>
-                        Valor: R$ <UINUmber format={'0a'}>{precoTratado}</UINUmber>
+                        <DescNome>Desc: {item.name}</DescNome>
+                        <DivPreco><DescPreco>Valor: R</DescPreco><UINUmber format={'$0,0.00'}>{precoTratado}</UINUmber></DivPreco>
                     </DescCarrinho>
-                    <DescQuant>Qtd: {item.quantity}</DescQuant>
+                    <DescQuant>
+                        <br/>
+                        Qtd: 
+                        <br/>
+                        {item.quantity}</DescQuant>
                 </CarrinhoMapContainer>
                     <BotãoRemover onClick={removeItem}>
                         Remover item
@@ -84,10 +90,10 @@ export const Items = ({ cartState, setCartState, setAmountState, amountState }) 
         <ItemsContainer>
             {carrinho}
             <BotãoContainer>
-                <BotãoLimpar>Limpar carrinho</BotãoLimpar>
+                <BotãoLimpar onClick={limpaCarrinho}>Limpar carrinho</BotãoLimpar>
             </BotãoContainer>
             <ValorTotalContainer>
-            <Valor>aaaa<UINUmber format={'0,0'}>{amountState}</UINUmber></Valor>
+            <Valor>Total: R</Valor><UINUmber format={'$0,0.00'}>{amountState}</UINUmber>
             </ValorTotalContainer>
         </ItemsContainer>
     );

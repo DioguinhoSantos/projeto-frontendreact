@@ -14,8 +14,7 @@ export const CarrinhoMapContainer = styled.div`
     flex-direction: row;
     width: 100%;
     box-sizing: border-box;
-    justify-content: space-around;
-    /* border: 1px solid; */
+    justify-content: space-between;
     margin-bottom: 0.25rem;
 `
 
@@ -31,26 +30,22 @@ export const CarrinhoContainer = styled.div`
 export const CartCardImg = styled.img`
     width: 40px;
     height: 40px;
-    /* width: auto; */
     border: 1px solid;
 `
 
-export const DescCarrinho = styled.p`
+export const DescCarrinho = styled.div`
     font-size: 10px;
     margin: 0;
-    /* padding-left: 0.1rem; */
-    align-items: center;
+    width: 100%;
+    padding-left: 0.1rem;
 `
 
 export const Valor = styled.p`
     display: flex;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
     font-size: 14px;
     margin: 0;
     padding: 0;
-
-    /* padding-left: 0.25rem; */
 `
 
 export const BotãoLimpar = styled.button`
@@ -67,9 +62,7 @@ export const BotãoRemover = styled.button`
     display: flex;
     font-size: 10px;
     justify-content: center;
-    /* align-self: center; */
     width: 80px;
-    /* padding: 0.25rem; */
     cursor: pointer;
 `
 
@@ -85,14 +78,19 @@ export const BotãoContainer = styled.div`
 export const ValorTotalContainer = styled.div`
     display: flex;
     box-sizing: border-box;
+    font-size: 16px;
     flex-direction: row;
-    padding: 0.5rem;
-    justify-items: flex-end;
+    justify-content: center;
+    padding: 0.20rem;
     border: 1px solid;
 `
-export const DescQuant = styled.p`
+export const DescQuant = styled.div`
+    display: flex;
+    width: 15%;
     font-size: 10px;
     padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    justify-content: center;
 `
 
 export const UINUmber = styled.p`
@@ -104,3 +102,29 @@ export const UINUmber = styled.p`
 
     /* padding-left: 0.25rem; */
 `
+
+export const DescNome = styled.p`
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.25rem;
+`
+
+export const DescPreco = styled.p`
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.25rem;
+`
+
+export const DivPreco = styled.div`
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.20rem;
+    `
