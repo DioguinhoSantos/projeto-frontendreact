@@ -15,8 +15,6 @@ function App() {
   const [cartState, setCartState] = useState([]);
   const [amountState, setAmountState] = useState(0);
 
-  
-
   const OCMinFilter = (e) => {
     setMinFilter(e.target.value);
   }
@@ -55,8 +53,9 @@ function App() {
       products={products}
       cartState={cartState}
       setCartState={setCartState}
-      amountState={amountState}
-      OCAmountState={OCAmountState}
+      minFilter={minFilter}
+      maxFilter={maxFilter}
+      searchFilter={searchFilter}
       />
 
       <Cart
