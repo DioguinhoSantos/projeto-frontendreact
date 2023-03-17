@@ -1,57 +1,72 @@
 import { CardImg, CardsContainer, ProductCardContainer, DescProd, Botão } from "./productCardStyle";
 
-export const ProductCard = ({ products, cartState, setCartState }) => {
+export const ProductCard = ({ products, cartState, setCartState, minFilter, maxFilter, searchFilter }) => {
+
+    
+    let testo = products.filter((it) => {
+        return it.value > maxFilter;
+    })
+    
+    console.log(maxFilter);
 
     let aaa = products
+    .filter((card) => {
+        if ( minFilter !== '')
+        return card.value > minFilter;
+    })
+    .filter((card) => {
+        if ( maxFilter !== '' )
+        return card.value < maxFilter;
+    })
     .map((card, index) => {
 
-        const addCart = () => {
+            const addCart = () => {
             
-            let checaId = card.id;
-            let temNoCarrinho = false
-            let checaCarrinho = [...cartState]
-            let addItem = [];
+                let checaId = card.id;
+                let temNoCarrinho = false
+                let checaCarrinho = [...cartState]
+                let addItem = [];
 
-            if ( checaCarrinho.length > 0 ) {
+                if ( checaCarrinho.length > 0 ) {
 
-                for (let itemNoCarrinho of checaCarrinho) {
+                    for (let itemNoCarrinho of checaCarrinho) {
 
-                    if (checaId === itemNoCarrinho.id){
-                        temNoCarrinho = true;
-                        break;
+                        if (checaId === itemNoCarrinho.id){
+                            temNoCarrinho = true;
+                            break;
+                        }
+                            
+                        if (checaId !== itemNoCarrinho.id){
+                            temNoCarrinho = false;
+                        }
+
                     }
-                        
-                    if (checaId !== itemNoCarrinho.id){
-                        temNoCarrinho = false;
+
+                    if (temNoCarrinho === false) {
+                        card.quantity = 1;
+                        addItem = [...cartState, card];
+                        setCartState(addItem);
+                        console.log(addItem);
                     }
 
-                }
+                    else {
+                        card.quantity += 1;
+                        addItem = [...cartState];
+                        setCartState(addItem);
+                        console.log(addItem);                       
+                    }
 
-                if (temNoCarrinho === false) {
-                    card.quantity = 1;
-                    addItem = [...cartState, card];
+                }                            
+
+                else {                                
+                    card.quantity = 1;                                
+                    addItem = [...cartState, card];                                
+                    console.log(addItem);                                
                     setCartState(addItem);
-                    console.log(addItem);
                 }
-
-                else {
-                    card.quantity += 1;
-                    addItem = [...cartState];
-                    setCartState(addItem);
-                    console.log(addItem);                       
-                }
-
-            }                            
-
-            else {                                
-                card.quantity = 1;                                
-                addItem = [...cartState, card];                                
-                console.log(addItem);                                
-                setCartState(addItem);
-            }
                             
 
-        }
+            }
 
         return (
             <CardsContainer key={index}>
@@ -77,9 +92,29 @@ export const ProductCard = ({ products, cartState, setCartState }) => {
                 
             </CardsContainer>
         )
-    }
+        })
     
-    )
+
+        // .filter((card) => {
+
+        //     if (maxFilter > 0) 
+            
+        //         return card.value <= maxFilter;
+
+        // })
+
+        // .filter((card) => {
+        
+        //     if ( minFilter !== 0 ){
+        //     return card.value >= minFilter;
+        //     }
+
+        // .filter((card) => {
+
+        //     return card.name <= searchFilter;
+        // })
+            
+        // })
 
     return (
         <ProductCardContainer>

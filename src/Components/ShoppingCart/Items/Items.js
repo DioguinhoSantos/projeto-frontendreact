@@ -75,7 +75,8 @@ export const Items = ({ cartState, setCartState, setAmountState, amountState }) 
                         <br/>
                         Qtd: 
                         <br/>
-                        {item.quantity}</DescQuant>
+                        {item.quantity}
+                    </DescQuant>
                 </CarrinhoMapContainer>
                     <BotãoRemover onClick={removeItem}>
                         Remover item
