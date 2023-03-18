@@ -1,200 +1,78 @@
-import { CardImg, CardsContainer, ProductCardContainer, DescProd, Botão } from "./productCardStyle";
+import React, { useState } from 'react';
 
-export const ProductCard = ({ products, cartState, setCartState, minFilter, maxFilter, searchFilter }) => {
+import {
+  CardImg,
+  CardsContainer,
+  DescProd,
+  Botão,
+  Quant,
+  Preço
+} from './productCardStyle';
 
-    
-    let testo = products.filter((it) => {
-        return it.value > maxFilter;
-    })
-    
-    console.log(maxFilter);
+const ProductCard = ({ card, cartState, setCartState }) => {
 
-    let aaa = products
-    .filter((card) => {
-        if ( minFilter !== '')
-        return card.value > minFilter;
-    })
-    .filter((card) => {
-        if ( maxFilter !== '' )
-        return card.value < maxFilter;
-    })
-    .map((card, index) => {
+  const [stateQuant, setStateQuant] = useState(1);
 
-            const addCart = () => {
-            
-                let checaId = card.id;
-                let temNoCarrinho = false
-                let checaCarrinho = [...cartState]
-                let addItem = [];
+  const OCStateQuant = (e) => {
+    setStateQuant(e.target.value);
+  };
 
-                if ( checaCarrinho.length > 0 ) {
+  const addCart = () => {
+    let checaId = card.id;
+    let temNoCarrinho = false;
+    let checaCarrinho = [...cartState];
+    let addItem = [];
 
-                    for (let itemNoCarrinho of checaCarrinho) {
+    if (checaCarrinho.length > 0) {
+      for (let itemNoCarrinho of checaCarrinho) {
+        if (checaId === itemNoCarrinho.id) {
+          temNoCarrinho = true;
+          break;
+        }
 
-                        if (checaId === itemNoCarrinho.id){
-                            temNoCarrinho = true;
-                            break;
-                        }
-                            
-                        if (checaId !== itemNoCarrinho.id){
-                            temNoCarrinho = false;
-                        }
+        if (checaId !== itemNoCarrinho.id) {
+          temNoCarrinho = false;
+        }
+      }
 
-                    }
+      if (temNoCarrinho === false && stateQuant > 0) {
+        card.quantity = Number(stateQuant);
+        addItem = [...cartState, card];
+        setCartState(addItem);
+        console.log(addItem);
+      } else {
+        card.quantity += Number(stateQuant);
+        addItem = [...cartState];
+        setCartState(addItem);
+        console.log(addItem);
+      }
+    } else if ( stateQuant > 0 ) {
+      card.quantity = Number(stateQuant);
+      addItem = [...cartState, card];
+      console.log(addItem);
+      setCartState(addItem);
+    }
+  };
 
-                    if (temNoCarrinho === false) {
-                        card.quantity = 1;
-                        addItem = [...cartState, card];
-                        setCartState(addItem);
-                        console.log(addItem);
-                    }
+  return (
+    <CardsContainer>
+      <CardImg src={card.imageUrl} alt="aaaaa" />
 
-                    else {
-                        card.quantity += 1;
-                        addItem = [...cartState];
-                        setCartState(addItem);
-                        console.log(addItem);                       
-                    }
+      <DescProd>{card.name}</DescProd>
 
-                }                            
+      <Preço>{card.value}</Preço>
 
-                else {                                
-                    card.quantity = 1;                                
-                    addItem = [...cartState, card];                                
-                    console.log(addItem);                                
-                    setCartState(addItem);
-                }
-                            
+      <Quant
+        type="number"
+        min={1}
+        placeholder="Quantidade"
+        value={stateQuant}
+        onChange={OCStateQuant}
+      />
 
-            }
-
-        return (
-            <CardsContainer key={index}>
-
-                <CardImg 
-                src={card.imageUrl} 
-                alt='aaaaa'
-                />
-
-                <DescProd>{card.name}</DescProd>
-
-                {/* <Quant key={index}
-                type='number' 
-                min={0} 
-                placeholder='Quantidade' 
-                value={stateQuant} 
-                onChange={OCStateQuant}/> */}
-
-                <Botão 
-                onClick={addCart}>
-                    Adicionar
-                </Botão>
-                
-            </CardsContainer>
-        )
-        })
-    
-
-        // .filter((card) => {
-
-        //     if (maxFilter > 0) 
-            
-        //         return card.value <= maxFilter;
-
-        // })
-
-        // .filter((card) => {
-        
-        //     if ( minFilter !== 0 ){
-        //     return card.value >= minFilter;
-        //     }
-
-        // .filter((card) => {
-
-        //     return card.name <= searchFilter;
-        // })
-            
-        // })
-
-    return (
-        <ProductCardContainer>
-
-            {aaa}
-
-            {/* <CardsContainer className='card'>
-                <CardImg src='https://picsum.photos/300/335?a=1' alt='legenda' />
-                <Legendas>testinho</Legendas>
-                <button>Adicionar</button>
-            </CardsContainer> */}
-
-        </ProductCardContainer>
-    );
-}
+      <Botão onClick={addCart}>Adicionar</Botão>
+    </CardsContainer>
+  );
+};
 
 export default ProductCard;
-
-
-// códigos a analisar
-
-            // if(card.quantity = 0) {
-            //     card.quantity = 1; 
-
-            // }
-
-            // if(card.quantity > 0) {
-            //     card.quantity += 1;
-            // }
-            // const filtrado = cartState.filter(function(obj) { return obj.id === 1;})
-
-            
-            
-            // console.log(typeof filtrado)
-
-            // console.log(aaa)
-            // const testinho = cartState.filter(teste )
-            
-            // console.log(testinho);
-
-            // const filtrado = cartState.filter(function(obj) {
-            // return obj.id === 1})
-            
-            // console.log(filtrado[0].id);
-
-            // cartState.filter(function(obj) { return obj.id })
-
-            // console.log(cartState.filter((filtrads) => {
-            //     return filtrads.id === 1
-            // }))
-
-            // console.log(card.id)
-
-                                
-                            
-                            
-                            // let pegaId = [...cartState[i].id];
-                            // if (cartState === true) {
-                                //     console.log('alaudeeee')
-                                // }
-                                // console.log(checaId);
-                                
-                                // console.log(checaId);
-                                
-                                // if ( cartState[i].id === checaId ) {
-                                    
-                                    // }
-                                    
-                                    // if (cartState.length === 0) {
-                                        // for (let qualquer of addItem) {
-                                        //     console.log(qualquer.name)
-                                        // }
-                            
-                            // if (cartState.length !== 0) {
-                            //     console.log('for funcionando');
-                                // console.log(typeof cartState);
-                                // card.quantity = card.quantity + 1;
-                                // let addItem = [...cartState, card];
-                                // setCartState(addItem);
-                                // console.log(addItem);
-                                // addItem = [];
-                            
-                        
