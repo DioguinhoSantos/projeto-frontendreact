@@ -1,4 +1,4 @@
-import ProductCard from "./ProductCard/ProductCard";
+import ProductCardList from "./ProductCard/ProductCardList";
 import { HomeContainer, NomePagina, Classificar, Seletor, QtdEncontrada } from "./homeStyle";
 import { useState } from "react";
 
@@ -11,6 +11,8 @@ export function Home({ products, cartState, setCartState, minFilter, maxFilter, 
     }
     
     const qtd = products.length;
+
+    
 
     return (
         <HomeContainer>
@@ -37,13 +39,14 @@ export function Home({ products, cartState, setCartState, minFilter, maxFilter, 
 
             </Classificar>
 
-            <ProductCard 
+            <ProductCardList 
             products={products} 
             cartState={cartState}
             setCartState={setCartState}
             minFilter={minFilter}
             maxFilter={maxFilter}
             searchFilter={searchFilter}
+            ordination={ordination}
             />
         </HomeContainer>
     );

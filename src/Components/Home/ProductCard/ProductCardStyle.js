@@ -42,3 +42,12 @@ export const Quant = styled.input`
     font-size: 12px;
     padding: 0.25rem;
 `
+
+export const Preço = styled.p`
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.25rem;
+`
