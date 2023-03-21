@@ -2,29 +2,52 @@
 export const products = [
     {
       id: 1,
-      name: "produto 1",
-      value: 10000.0,
-      imageUrl: "https://picsum.photos/300/335?a=1"
+      name: "Sputnik 1",
+      value: 10000,
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sputnik_asm.jpg/800px-Sputnik_asm.jpg"
     },
     {
       id: 2,
-      name: "Exemplo 2",
-      value: 5000.0,
-      imageUrl: "https://picsum.photos/300/335?a=2"
+      name: "Vostok 1",
+      value: 17500,
+      imageUrl: "https://aeromagazine.uol.com.br/media/versions/vostok_1_free_big.jpg"
     },
     {
       id: 3,
-      name: "Item 3",
-      value: 500.0,
-      imageUrl: "https://picsum.photos/300/335?a=3"
+      name: "Apollo 11",
+      value: 50000,
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/04/Apollo_11_Lunar_Lander_-_5927_NASA.jpg"
     },
     {
       id: 4,
-      name: "Item 4",
-      value: 250.0,
+      name: "Challenger",
+      value: 23000,
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Space_Shuttle_Challenger_%2818649411714%29.jpg/800px-Space_Shuttle_Challenger_%2818649411714%29.jpg"
+    },
+    {
+      id: 5,
+      name: "Soyuz",
+      value: 18700,
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Soyuz_MS.jpg"
+    },
+    {
+      id: 6,
+      name: "Saturn V",
+      value: 14000,
+      imageUrl: "https://picsum.photos/300/335?a=4"
+    },
+    {
+      id: 7,
+      name: "Falcon 9",
+      value: 63900,
+      imageUrl: "https://picsum.photos/300/335?a=4"
+    },
+    {
+      id: 8,
+      name: "Columbia",
+      value: 89050,
       imageUrl: "https://picsum.photos/300/335?a=4"
     }
-    
   ];
 
 export default products;
