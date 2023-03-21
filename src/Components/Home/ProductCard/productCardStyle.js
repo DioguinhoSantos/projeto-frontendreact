@@ -12,8 +12,8 @@ export const ProductCardContainer = styled.div`
 `
 
 export const CardImg = styled.img`
-    max-width: 100px;
-    /* width: auto; */
+    width: 100px;
+    height: 100px;
     border: 1px solid;
 `
 
