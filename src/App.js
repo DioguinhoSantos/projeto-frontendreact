@@ -31,11 +31,8 @@ function App() {
     setAmountState(e.target.value);
   }
 
-  // const filtrado = products.filter(function(obj) { return obj.id === 2;})
-
-  // console.log(filtrado);
-
   document.title='Update contagem='+updates
+  
   return (
     <Container>
 
@@ -71,20 +68,3 @@ function App() {
 }
 
 export default App;
-
-
-  /* <header className="App-header">
-          <p>
-            Funcionando!!!!!!!!!!!!
-          </p>
-        </header> */
-
-//como colocar um link bonitinho
-/* <a
-  className="App-link"
-  href="https://reactjs.org"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Learn React
-</a> */

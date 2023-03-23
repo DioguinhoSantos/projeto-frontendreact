@@ -34,19 +34,19 @@ export const products = [
       id: 6,
       name: "Saturn V",
       value: 14000,
-      imageUrl: "https://picsum.photos/300/335?a=4"
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg/220px-Apollo_11_Launch_-_GPN-2000-000630.jpg"
     },
     {
       id: 7,
       name: "Falcon 9",
       value: 63900,
-      imageUrl: "https://picsum.photos/300/335?a=4"
+      imageUrl: "https://rocketstem.b-cdn.net/wp-content/uploads/2020/11/EmvV4u1UcAAnvjg.jpeg"
     },
     {
       id: 8,
       name: "Columbia",
       value: 89050,
-      imageUrl: "https://picsum.photos/300/335?a=4"
+      imageUrl: "https://www.nasa.gov/centers/kennedy/images/content/91095main_ksc-97pc-0569c.jpg"
     }
   ];
 
