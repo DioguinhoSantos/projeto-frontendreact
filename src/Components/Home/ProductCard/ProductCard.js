@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import UINUmber from "../../UINumber";
 
 import {
   CardImg,
@@ -6,7 +7,8 @@ import {
   DescProd,
   Botão,
   Quant,
-  Preço
+  Preço,
+  DivPreco
 } from './productCardStyle';
 
 const ProductCard = ({ card, cartState, setCartState }) => {
@@ -60,10 +62,17 @@ const ProductCard = ({ card, cartState, setCartState }) => {
 
       <DescProd>{card.name}</DescProd>
 
-      <Preço>{card.value}</Preço>
+      <DivPreco>
+        R
+        <Preço>
+          <UINUmber format={'$0,0.00'}>
+            {card.value}
+          </UINUmber>
+        </Preço>
+      </DivPreco>
 
       <Quant
-        type="number"
+        type='number'
         min={1}
         placeholder="Quantidade"
         value={stateQuant}

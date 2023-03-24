@@ -8,7 +8,6 @@ export const ProductCardContainer = styled.div`
     margin: 0.5rem;
     border: 1px solid;
     justify-content: space-evenly;
-    /* text-align: center; */
 `
 
 export const CardImg = styled.img`
@@ -27,6 +26,7 @@ export const CardsContainer = styled.div`
 
 export const DescProd = styled.p`
     font-size: 12px;
+    font-weight: bold;
     margin: 0;
     padding: 0rem;
 `
@@ -37,17 +37,38 @@ export const Botão = styled.button`
     cursor: pointer;
 `
 
+// export const Quant = styled.input`
+//     width: 40%;
+//     font-size: 12px;
+//     padding: 0.25rem    
+// `
+
 export const Quant = styled.input`
     width: 40%;
     font-size: 12px;
     padding: 0.25rem;
+    ::-webkit-inner-spin-button{
+        -webkit-appearance: none; 
+        margin: 0; 
+    }
+    ::-webkit-outer-spin-button{
+        -webkit-appearance: none; 
+        margin: 0; 
+    }  
 `
 
-export const Preço = styled.p`
-    display: flex;
-    align-items: center;
-    font-size: 10px;
+export const Preço = styled.div`
+    font-size: 11px;
     margin: 0;
     padding: 0;
-    padding-left: 0.25rem;
+`
+
+export const DivPreco = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
 `
