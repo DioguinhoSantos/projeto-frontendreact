@@ -17,7 +17,7 @@ export function Home({ products, cartState, setCartState, minFilter, maxFilter, 
     return (
         <HomeContainer>
             <NomePagina>
-                Home
+                Naves, Foguetes e Ônibus Espaciais
             </NomePagina>
 
             <Classificar 

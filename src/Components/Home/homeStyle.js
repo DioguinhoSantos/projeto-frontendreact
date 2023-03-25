@@ -9,14 +9,13 @@ export const HomeContainer = styled.div`
     margin: 0.5rem;
     text-align: center;
     border: 1px solid;
-    /* align-items: stretch; */
-    /* text-align: center; */
     justify-items: flex-start;
-    /* width: 60em; */
+    border-radius: 10px;
 `
 
 export const NomePagina = styled.p`
     font-size: 24px;
+    font-weight: bold;
 `
 
 export const Classificar = styled.div`
@@ -30,7 +29,6 @@ export const Classificar = styled.div`
 export const Seletor = styled.select`
     width: 100px;
     height: 20px;
-    /* flex-direction: flex-start; */
 `
 
 export const QtdEncontrada = styled.p`
