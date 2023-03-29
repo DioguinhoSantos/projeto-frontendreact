@@ -6,7 +6,6 @@ export const ProductCardContainer = styled.div`
   flex-wrap: wrap;
   padding: 0.25rem;
   margin: 0.5rem;
-  border: 1px solid;
   justify-content: space-evenly;
 `;
 
@@ -14,12 +13,14 @@ export const CardImg = styled.img`
   width: 100px;
   height: 100px;
   border: 1px solid;
+  border-radius: 5px;
 `;
 
 export const CardsContainer = styled.div`
   max-height: 200px;
   width: 150px;
   border: 1px solid;
+  border-radius: 5px;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 `;
@@ -34,6 +35,7 @@ export const DescProd = styled.p`
 export const Botão = styled.button`
   font-size: 12px;
   padding: 0.25rem;
+  border-radius: 3px;
   cursor: pointer;
 `;
 
@@ -41,6 +43,7 @@ export const Quant = styled.input`
   width: 40%;
   font-size: 12px;
   padding: 0.25rem;
+  border-radius: 3px;
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;

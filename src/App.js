@@ -6,44 +6,36 @@ import { products } from "./Assets/productsList";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  
   const [minFilter, setMinFilter] = useState("");
   const [maxFilter, setMaxFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
   const [cartState, setCartState] = useState([]);
   const [amountState, setAmountState] = useState(0);
-  
-  
+
   const guardaCarrinho = () => {
-      if (cartState.length > 0) {
-    let testeLS = JSON.stringify(cartState);
-    console.log(testeLS)
-    localStorage.setItem('teste', testeLS);
-      }
-  }
+    if (cartState.length > 0) {
+      let testeLS = JSON.stringify(cartState);
+      console.log(testeLS);
+      localStorage.setItem("teste", testeLS);
+    }
+  };
 
   const resgataCarrinho = () => {
-    const carrinhoResgatado = localStorage.getItem('teste');
-      if (carrinhoResgatado !== ''){
-        const carrinhoResgatadoToArray = JSON.parse(carrinhoResgatado);
-        console.log(carrinhoResgatadoToArray);
-        setCartState(carrinhoResgatadoToArray);
-      }
-  }
+    const carrinhoResgatado = localStorage.getItem("teste");
+    if (carrinhoResgatado !== "") {
+      const carrinhoResgatadoToArray = JSON.parse(carrinhoResgatado);
+      console.log(carrinhoResgatadoToArray);
+      setCartState(carrinhoResgatadoToArray);
+    }
+  };
 
   useEffect(() => {
-    
     guardaCarrinho();
-    
-  }, [cartState]
-  )
-  
-  useEffect(() => {
-  
-    resgataCarrinho();
+  }, [cartState]);
 
-  }, []
-  )
+  useEffect(() => {
+    resgataCarrinho();
+  }, []);
 
   const OCMinFilter = (e) => {
     setMinFilter(e.target.value);
@@ -60,13 +52,6 @@ function App() {
   const OCAmountState = (e) => {
     setAmountState(e.target.value);
   };
-
-  // const guardaCarrinho = () => {
-  //   let testeLS = JSON.stringify(cartState);
-  //   // console.log(testeLS)
-  //   localStorage.setItem('teste', testeLS);
-  // }
-
 
   return (
     <Container>

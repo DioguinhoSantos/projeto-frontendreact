@@ -8,7 +8,7 @@ export const Filters = ({
   searchFilter,
   OCSearchFilter,
   guardaCarrinho,
-  resgataCarrinho
+  resgataCarrinho,
 }) => {
   return (
     <FilterContainer>

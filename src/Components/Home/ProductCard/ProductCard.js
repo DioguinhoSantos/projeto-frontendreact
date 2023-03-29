@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import UINUmber from "../../UINumber";
 
 import {
@@ -8,11 +8,10 @@ import {
   Botão,
   Quant,
   Preço,
-  DivPreco
-} from './productCardStyle';
+  DivPreco,
+} from "./productCardStyle";
 
 const ProductCard = ({ card, cartState, setCartState }) => {
-
   const [stateQuant, setStateQuant] = useState(1);
 
   const OCStateQuant = (e) => {
@@ -48,7 +47,7 @@ const ProductCard = ({ card, cartState, setCartState }) => {
         setCartState(addItem);
         console.log(addItem);
       }
-    } else if ( stateQuant > 0 ) {
+    } else if (stateQuant > 0) {
       card.quantity = Number(stateQuant);
       addItem = [...cartState, card];
       console.log(addItem);
@@ -65,14 +64,12 @@ const ProductCard = ({ card, cartState, setCartState }) => {
       <DivPreco>
         R
         <Preço>
-          <UINUmber format={'$0,0.00'}>
-            {card.value}
-          </UINUmber>
+          <UINUmber format={"$0,0.00"}>{card.value}</UINUmber>
         </Preço>
       </DivPreco>
 
       <Quant
-        type='number'
+        type="number"
         min={1}
         placeholder="Quantidade"
         value={stateQuant}
