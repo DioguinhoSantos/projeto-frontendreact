@@ -10,7 +10,7 @@ export const FilterContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 10px;
 `;
 export const Filtros = styled.input`
   font-size: 12px;
@@ -27,10 +27,10 @@ export const Filtros = styled.input`
 `;
 
 export const Labels = styled.label`
-    font-size: 15px;
-`
+  font-size: 15px;
+`;
 
 export const Titulo = styled.p`
-    font-size: 20px;
-    font-weight: bold;
-`
+  font-size: 20px;
+  font-weight: bold;
+`;
