@@ -6,9 +6,7 @@ export const Filters = ({
   maxFilter,
   OCMaxFilter,
   searchFilter,
-  OCSearchFilter,
-  guardaCarrinho,
-  resgataCarrinho,
+  OCSearchFilter
 }) => {
   return (
     <FilterContainer>

@@ -30,7 +30,7 @@ export const Items = ({
     localStorage.setItem("teste", "");
   };
 
-  let carrinho = cartState.map((item, index) => {
+  let carrinho = cartState?.map((item, index) => {
     const removeItem = () => {
       if (item.quantity > 0) {
         item.quantity -= 1;
