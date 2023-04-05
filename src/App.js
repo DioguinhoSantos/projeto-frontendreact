@@ -22,12 +22,14 @@ function App() {
 
   const resgataCarrinho = () => {
     const carrinhoResgatado = localStorage.getItem("teste");
-    if (carrinhoResgatado !== "") {
+    console.log(carrinhoResgatado);
+    if ( carrinhoResgatado && carrinhoResgatado !== "") {
       const carrinhoResgatadoToArray = JSON.parse(carrinhoResgatado);
       console.log(carrinhoResgatadoToArray);
       setCartState(carrinhoResgatadoToArray);
     }
   };
+
 
   useEffect(() => {
     guardaCarrinho();
