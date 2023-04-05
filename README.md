@@ -12,3 +12,5 @@ Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar
 - localStorage
 
 
+
+![Print do site funcionando](Screenshot_2.png)
